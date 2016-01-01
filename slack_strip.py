@@ -1,3 +1,8 @@
+'''
+This takes Slack history copied into text file and writes to a spreadsheet with the title of the URL in the next row
+Written to pull all the YouTube links that had been posted over time in a group chat and organize them into one doc
+'''
+
 import os, re, urllib2, csv
 from urllib2 import Request, URLError
 from bs4 import BeautifulSoup
