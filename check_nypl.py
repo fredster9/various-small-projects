@@ -9,10 +9,8 @@ import xlrd, xlwt
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
-
 ## Substantiate webdriver
 driver = webdriver.PhantomJS()
-
 
 ## Read in Excel info
 print "Logging: Opening Excel file" # Open Excel file
@@ -81,8 +79,7 @@ for book in book_titles:
             else:
                 results = "%s: Found but not available currently" % book
                 results_yes_not_avail.append(book)
-
-
+                
 #print results
 print "BOOKS NOT FOUND"
 print set(results_no) #deduping list, probably better way
@@ -94,10 +91,3 @@ print '\n'
 
 print "BOOKS FOUND AND CURRENTLY AVAILABLE FOR BORROWING"
 print set(results_yes_avail) #deduping list, probably better way
-
-
-
-
-
-
-
